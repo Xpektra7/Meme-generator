@@ -1,16 +1,38 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";  
 export default function Main() {
+  const [data,setData] = useState(null)
+  
   const [meme, setMeme] = useState({
     topText: "ONE DOES NOT SIMPLY",
     bottomText: "WALK INTO MORDOR",
     imageUrl: "",
   });
+
   function handleChange(event){
         const {value,name} = event.currentTarget
         setMeme(prev => ( 
             {...prev,[name]:value}
          ) )
   }
+
+  useEffect(() => {
+      async function getData(){
+          const des = await fetch("https://api.imgflip.com/get_memes");
+          const dat = await des.json();
+          setData(dat);          
+      }
+      getData();
+  }, [])    
+
+  function getRandomMeme(){
+    const randomNumber = Math.floor(Math.random() * data.data.memes.length);
+    const url = data.data.memes[randomNumber].url;
+    setMeme(prev => ({
+      ...prev,
+      imageUrl: url
+    }))
+  }
+  
   return (
     <div className="main"> 
       <div>
@@ -27,7 +49,9 @@ export default function Main() {
            value={meme.bottomText} />
         </label>
       </div>
-      <button>Get a new meme image</button>
+      <button
+      onClick={getRandomMeme}
+      >Get a new meme image</button>
       <div className="meme">
         <img src={meme.imageUrl} />
         <span className="topText"> {meme.topText} </span>

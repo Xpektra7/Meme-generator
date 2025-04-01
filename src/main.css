@@ -76,13 +76,25 @@ body{
             border: 1px solid black;
         }
         >span{
+            width: 100%;
+            text-align: center;
             text-transform: uppercase;
-            stroke: 2px solid white;
             position: absolute;
             font-size: 2rem;
             font-weight: 700;
-            right: 25%;
             left: auto;
+            color: white;
+            text-shadow:
+            2px 2px 0 #000,
+            -2px -2px 0 #000,
+            2px -2px 0 #000,
+            -2px 2px 0 #000,
+            0 2px 0 #000,
+            2px 0 0 #000,
+            0 -2px 0 #000,
+            -2px 0 0 #000,
+            2px 2px 5px #000;
+    
 
         }
         >.topText{
