@@ -12,7 +12,7 @@ export default function Main() {
          ) )
   }
   return (
-    <div className="main">
+    <div className="main"> 
       <div>
         <label htmlFor="topText">
           Top Text
