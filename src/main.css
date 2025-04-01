@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    background-color: #f5f5f5;
+    
+}
+.header{
+    display: flex;
+    align-items: center;
+    background-color: #a200ff;
+    gap: .8rem;
+    color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    
+    >div{
+        display: flex;
+        margin: 0 auto;
+
+        align-items: center;    
+        width: 100%;
+        max-width: 500px;
+        >h1{
+            font-size:2rem;
+            font-weight: 900;
+        }
+        >.logo{
+            width: 48px;
+        }
+    
+    }
+}
+.main{
+    margin: 2rem auto;
+    width: 100%;
+    max-width: 500px;
+
+    >div{
+        display: flex;
+        gap: 1rem;
+        >label{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: .25rem;
+            
+            >input{
+                padding: .5rem;
+                border-radius: 5px;
+                outline: none;
+            }
+        }
+    }
+    >button{
+        background-color: #a200ff;
+        width: 100%;
+        border-radius: 5px;
+        padding: .75rem;
+        color: white;
+        border:none;
+        margin: 1rem 0;
+        font-weight: 700;
+
+    }
+    .meme{
+        width: 100%;
+        height: 250px;
+        position: relative;
+        
+        >img{
+            width: 100%;
+            border: 1px solid black;
+        }
+        >span{
+            text-transform: uppercase;
+            stroke: 2px solid white;
+            position: absolute;
+            font-size: 2rem;
+            font-weight: 700;
+            right: 25%;
+            left: auto;
+
+        }
+        >.topText{
+            top: 0;
+        }
+        >.bottomText{
+            bottom: 0;
+        }
+    }
+}
