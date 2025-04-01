@@ -5,7 +5,7 @@ export default function Main() {
   const [meme, setMeme] = useState({
     topText: "ONE DOES NOT SIMPLY",
     bottomText: "WALK INTO MORDOR",
-    imageUrl: "",
+    imageUrl: "https://i.imgflip.com/2xscjb.png",
   });
 
   function handleChange(event){
