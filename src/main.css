@@ -98,10 +98,10 @@ body{
 
         }
         >.topText{
-            top: 0;
+            top: 9xp;
         }
         >.bottomText{
-            bottom: 0;
+            bottom: 9px;
         }
     }
 }
